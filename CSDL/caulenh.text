@@ -1,0 +1,65 @@
+- Tạo 1 csdl tên là "project" gồm 6 bảng
+- Tạo bảng "thongtindangnhap" bằng câu lệnh sau:
+
+  CREATE TABLE thongtindangnhap (
+    ma_nguoi_dung INT(10) NOT NULL AUTO_INCREMENT,
+    userName VARCHAR(255) NOT NULL,
+    passWord VARCHAR(255) NOT NULL,
+    Email VARCHAR(255)  NOT NULL,
+    role INT(11)  NOT NULL,
+    PRIMARY KEY (ma_nguoi_dung)
+);
+
+- Tạo bảng "giohang" bằng câu lệnh sau:
+
+  CREATE TABLE giohang (
+    ma_nguoi_dung INT(10) NOT NULL,
+    ma_thuc_pham INT(10) NOT NULL,
+    ma_nuoc INT(10) NOT NULL,
+    ma_sinh_to INT(10) NOT NULL,
+    tenSP VARCHAR(255) NOT NULL,
+    anhSP VARCHAR(255) NOT NULL,
+    giaSP INT(11) NOT NULL,
+    soLuong INT(11) NOT NULL,
+    PRIMARY KEY (ma_nguoi_dung, ma_thuc_pham, ma_nuoc, ma_sinh_to)
+);
+
+- Tạo bảng "orders" bằng câu lệnh sau:
+
+  CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    total_amount DECIMAL(10, 2) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+- Tạo bảng "add_nuoc" bằng câu lệnh sau:
+
+  CREATE TABLE add_nuoc (
+    ma_nuoc INT(11) AUTO_INCREMENT PRIMARY KEY,
+    ten_mon VARCHAR(255) NOT NULL,
+    anh_mh TEXT,
+    gia_ban INT(25),
+    mo_ta TEXT
+);
+
+- Tạo bảng "add_sinh_to" bằng câu lệnh sau:
+
+  CREATE TABLE add_sinh_to (
+    ma_sinh_to INT(11) AUTO_INCREMENT PRIMARY KEY,
+    ten_mon VARCHAR(255) NOT NULL,
+    anh_mh TEXT,
+    gia_ban INT(25),
+    mo_ta TEXT
+);
+
+- Tạo bảng "addthucpham" bằng câu lệnh sau:
+
+  CREATE TABLE addthucpham (
+    ma_thuc_pham INT(11) AUTO_INCREMENT PRIMARY KEY,
+    ten_mon VARCHAR(255) NOT NULL,
+    gia_ban INT(25),
+    mo_ta TEXT
+);
+
+
